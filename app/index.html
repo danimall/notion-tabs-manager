@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Notion Tabs</h1>
+      <button id="refresh-btn" class="icon-btn" title="Refresh">↻</button>
+    </header>
+
+    <nav class="tab-bar">
+      <button class="tab-btn active" data-view="open">Open</button>
+      <button class="tab-btn" data-view="saved">Saved</button>
+    </nav>
+
+    <section id="open-view" class="view active">
+      <div class="tab-count"><span id="open-count">0</span> tabs open</div>
+      <div class="save-row">
+        <input id="save-name" type="text" placeholder="Snapshot name (optional)">
+        <button id="save-btn" class="btn primary">Save</button>
+      </div>
+      <ul id="open-tabs-list"></ul>
+    </section>
+
+    <section id="saved-view" class="view">
+      <div id="saved-groups-list"></div>
+      <p id="no-saved" class="muted">No saved snapshots yet.</p>
+    </section>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
