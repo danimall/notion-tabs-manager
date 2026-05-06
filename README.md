@@ -14,13 +14,16 @@ A macOS menu bar app that captures and manages your open Notion desktop app tabs
 
 The app reads the Notion desktop app's local state file (`~/Library/Application Support/Notion/state.json`) to discover your open tabs. No network requests, no Notion API key required.
 
+## Install
+
+Download the latest `.dmg` from [Releases](../../releases), open it, and drag **Notion Tabs Manager** to your Applications folder. On first launch, right-click → Open (or allow it in System Settings → Privacy & Security) since the app is not code-signed.
+
 ## Requirements
 
-- macOS
+- macOS (Apple Silicon)
 - [Notion desktop app](https://www.notion.so/desktop)
-- Node.js 18+
 
-## Setup
+## Development
 
 ```bash
 git clone <repo-url>
@@ -29,19 +32,15 @@ npm install
 npm start
 ```
 
-## Building the app
-
-To build a standalone `.app` you can launch from Finder:
+### Building from source
 
 ```bash
 npm run build
 ```
 
 This produces:
-- `dist/mac-arm64/Notion Tabs Manager.app` — drag to `/Applications`
+- `dist/mac-arm64/Notion Tabs Manager.app` — the standalone app
 - `dist/Notion Tabs Manager-1.0.0-arm64.dmg` — mountable installer
-
-The app is not code-signed, so on first launch you'll need to right-click → Open (or allow it in System Settings → Privacy & Security).
 
 ## Usage
 
