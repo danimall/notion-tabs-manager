@@ -29,6 +29,20 @@ npm install
 npm start
 ```
 
+## Building the app
+
+To build a standalone `.app` you can launch from Finder:
+
+```bash
+npm run build
+```
+
+This produces:
+- `dist/mac-arm64/Notion Tabs Manager.app` — drag to `/Applications`
+- `dist/Notion Tabs Manager-1.0.0-arm64.dmg` — mountable installer
+
+The app is not code-signed, so on first launch you'll need to right-click → Open (or allow it in System Settings → Privacy & Security).
+
 ## Usage
 
 1. Click the **N** icon in your menu bar
@@ -48,7 +62,7 @@ npm start
 │   ├── index.html   # Menu bar popup UI
 │   ├── styles.css   # Styling
 │   └── renderer.js  # UI logic
-├── icons/           # Menu bar and app icons
+├── icons/           # Menu bar, app, and .icns icons for macOS build
 └── package.json
 ```
 

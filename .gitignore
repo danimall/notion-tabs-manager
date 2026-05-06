@@ -3,3 +3,4 @@ dist/
 saved-tabs.json
 *.dmg
 *.zip
+.DS_Store
